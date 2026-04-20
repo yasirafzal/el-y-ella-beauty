@@ -1,0 +1,23 @@
+{
+  "overview": "A beautiful marketing website for El y Ella Beauty Salon featuring a hero gallery, services showcase with pricing, team profiles, client testimonials, a portfolio gallery, and a booking inquiry form.",
+  "features": [
+    "Hero banner with auto-rotating image carousel",
+    "Services section with cards showing name, description, and pricing",
+    "Team member profiles with photos and bios",
+    "Client testimonials carousel",
+    "Portfolio gallery with lightbox viewer",
+    "Booking inquiry form with confirmation",
+    "Contact section with hours and social media links"
+  ],
+  "category": "showcase",
+  "tags": [
+    "beauty-salon",
+    "hair",
+    "nails",
+    "spa",
+    "booking",
+    "gallery",
+    "portfolio"
+  ],
+  "last_updated": "2026-04-20T18:36:04.072Z"
+}

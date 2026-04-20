@@ -1,0 +1,44 @@
+type Timestamp = int;
+type SubmitResult = 
+ variant {
+   err: text;
+   ok: BookingId;
+ };
+type Service = 
+ variant {
+   blowout;
+   coloring;
+   facial;
+   haircut;
+   highlights;
+   manicure;
+   other: text;
+   pedicure;
+   styling;
+   treatment;
+ };
+type BookingSubmission = 
+ record {
+   email: text;
+   name: text;
+   notes: opt text;
+   phone: text;
+   preferredDateTime: text;
+   "service": Service;
+ };
+type BookingId = nat;
+type Booking = 
+ record {
+   email: text;
+   id: BookingId;
+   name: text;
+   notes: opt text;
+   phone: text;
+   preferredDateTime: text;
+   "service": Service;
+   submittedAt: Timestamp;
+ };
+service : {
+  listBookings: () -> (vec Booking) query;
+  submitBooking: (submission: BookingSubmission) -> (SubmitResult);
+}

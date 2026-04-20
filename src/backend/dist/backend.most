@@ -1,0 +1,38 @@
+// Version: 1.0.0
+type BookingId__429964979 = Nat;
+type Booking__1057793126 =
+  {
+    email : Text;
+    id : BookingId__429964979;
+    name : Text;
+    notes : ?Text;
+    phone : Text;
+    preferredDateTime : Text;
+    service : Service__406349462;
+    submittedAt : Timestamp__972749111
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Service__406349462 =
+  {
+    #blowout;
+    #coloring;
+    #facial;
+    #haircut;
+    #highlights;
+    #manicure;
+    #other : Text;
+    #pedicure;
+    #styling;
+    #treatment
+  };
+type Timestamp__972749111 = Int;
+actor {
+  stable bookings :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Booking__1057793126]];
+      var elementIndex : Nat__490723111
+    };
+  stable var nextBookingId : Nat
+};
